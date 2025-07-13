@@ -1,0 +1,21 @@
+<?php
+// config/database.php.example
+// هذا ملف مثال. قم بنسخه إلى database.php واملأ بياناتك.
+
+// بيانات الاتصال بقاعدة البيانات
+$servername = "localhost"; // أو اسم الخادم الخاص بك
+$username = "root";        // اسم المستخدم الخاص بقاعدة البيانات
+$password = "";            // كلمة مرور قاعدة البيانات
+$dbname = "ai_alredfani";   // اسم قاعدة البيانات
+
+// إنشاء الاتصال
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// التحقق من الاتصال
+if ($conn->connect_error) {
+    die("فشل الاتصال بقاعدة البيانات: " . $conn->connect_error);
+}
+
+// تعيين ترميز الأحرف إلى UTF-8 لدعم اللغة العربية
+$conn->set_charset("utf8mb4");
+?>
